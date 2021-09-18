@@ -106,7 +106,7 @@ a{
   }
   &__figure {
     position: relative;
-    width: 300%;
+    width: 300%;    /* width est pour régler carousel important ! */
     margin: 0;
     padding: 0;
     font-size: 0;
@@ -123,10 +123,55 @@ a{
   0% {left: 0%;}
   20% {left: 0%;}
   25% {left: -100%;}
-  45% {left: 0%;}
-  50% {left: 0%;}
-  70% {left: 0%;}
-  75% {left: 0%;}
-  95% {left: 0%;}
-  100% {left: 0%;}
+  45% {left: -100%;}
+  50% {left: -200%;}
+  70% {right: 200%;}
+  75% {right: 100%;}
+  95% {right: 100%;}
+  100% {right: 0%;}
+}
+
+// ******** Pricing **********
+.offers{
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.perspective {
+  width: 100%;
+  perspective: 800px;
+  display: flex;
+  justify-content: space-between;
+
+  &__3d {
+    width: 140px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 0 70px 63px -60px #494848;
+    transform-style:preserve-3d;
+    transition: transform 0.05s linear;
+
+    &--card {
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+      
+      &:after {
+        background: inherit;  /* importent pour hériter ou créer deuxième image */
+        content: '';
+        display: block;
+        position: absolute;
+        left: -60px;
+        top: 40px;
+        width: 200px;
+        height: 85%;
+        z-index: -1;
+        filter: blur(55px); /* effet flue */
+        
+        
+      }
+    }
+  }
 }
