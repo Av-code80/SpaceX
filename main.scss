@@ -149,7 +149,7 @@ a{
     height: 200px;
     margin: auto;
     box-shadow: 0 70px 63px -60px #494848;
-    transform-style:preserve-3d;
+    transform-style: preserve-3d;
     transition: transform 0.05s linear;
 
     &--card {
@@ -168,10 +168,62 @@ a{
         width: 200px;
         height: 85%;
         z-index: -1;
-        filter: blur(55px); /* effet flue */
-        
-        
+        filter: blur(50px); /* effet flue */
       }
     }
+  }
+  h2 {
+    position: absolute;
+    top: 0;
+    font-size: 1.1em;
+    font-weight: 100;
+    transform: translateZ(80px);
+    text-transform: uppercase;
+  }
+  span {
+    position: absolute;
+    bottom: 40px;
+    right: -10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    transform: translateZ(35px);
+  }
+}
+
+// ******************** BUTTON *********************
+@mixin dash ($array, $offset, $width) {
+  stroke-dasharray: $array;
+  stroke-dashoffset: $offset;
+  stroke-width: $width;
+}
+
+.button {
+  padding-top: 60px;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+
+  &:hover
+    &__rect {
+      @include dash(760,0, 2px)
+    }
+
+  &__rect {
+    fill: transparent; /* inside bbtn */
+    stroke: $orange;   /* border */
+    border-bottom: 5px solid $orange;
+
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    @include dash(140 540, -474, 8px)
+  }
+
+  &__text {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: $white;
+    top: -48px;
   }
 }
