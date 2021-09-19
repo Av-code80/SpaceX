@@ -1,9 +1,9 @@
 # SpaceX project
 
-Advanced Css Animation, jQuery et Sass website
+Advanced Css Animation, jQuery and Sass website
+
 
 ======== En Français ==========
-
 # Les Compétences techniques
 
 Animations avancé en CSS, [box-shadow avancé - Apparition progressive, Sélection, button border-color]
