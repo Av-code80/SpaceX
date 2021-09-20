@@ -1,6 +1,7 @@
 /*# sourceMappingURL=style.scss.map */
 @import url("https://fonts.googleapis.com/css2?family=Baumans&family=Megrim&display=swap");
 
+//**** VARIABLES *****
 $white: #f3f0f0;
 $blue: #84c1ff;
 $red: #ff1808;
@@ -10,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow:hidden;
+  overflow: hidden;
   position: relative;
   font-family: 'Baumans', cursive;
   color: $white;
