@@ -171,7 +171,7 @@ a {
     margin: auto;
     box-shadow: 0 70px 63px -60px #494848;
     transform-style: preserve-3d;
-    transition: transform 0.05s linear;
+    transition: transform .05s linear;
 
     &--card {
       background-size: cover;
@@ -180,7 +180,7 @@ a {
       border-radius: 15px;
 
       &:after {
-        background: inherit; /* importent pour hériter ou créer deuxième image */
+        background: inherit; 
         content: "";
         display: block;
         position: absolute;
